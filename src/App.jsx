@@ -6,23 +6,26 @@ function handleClick() {
 
 export default function App() {
   return (
-    <main className="mainbackground min-h-screen flex flex-col md:flex-row gap-4">
-      <div className="sidebackground bg-[url('images/bg-main-mobile.png')] bg-cover md:bg-[url('images/bg-main-desktop.png')] h-52 md:w-[483px] md:h-screen flex justify-center items-center ">
-        <div className="flex flex-col md:gap-10 max-w-96 md:absolute md:translate-x-40">
+    <main className="mainbackground max-h-screen flex flex-col md:flex-row">
+      <div
+        className="sidebackground bg-[url('images/bg-main-mobile.png')] bg-cover md:bg-[url('images/bg-main-desktop.png'
+       h-60 md:w-[483px] md:h-screen flex justify-center items-center "
+      >
+        <div className="flex flex-col md:gap-10 max-h-64 max-w-[80%] md:max-w-96 md:absolute md:translate-x-40">
           <img
             src="images/bg-card-front.png"
             alt="card-front"
-            className="translate-y-60 -translate-x-20 z-10 md:-translate-x-14 md:translate-y-0"
+            className="translate-y-32 -translate-x-7 z-10 md:-translate-x-14 md:translate-y-0"
           />
           <img
             src="images/bg-card-back.png"
             alt="card-back"
-            className="-translate-y-20 translate-x-20 md:translate-x-10 md:translate-y-0"
+            className="-translate-y-32 translate-x-7 md:translate-x-10 md:translate-y-0"
           />
         </div>
       </div>
-      <div className="flex justify-center relative top-40 md:top-0 md:left-80">
-        <form className="form flex flex-col justify-center  gap-4 text-black text-sm max-w-96">
+      <div className="flex justify-center relative top-28 md:top-0 md:left-80">
+        <form className="form flex flex-col justify-center  gap-4 text-black text-sm max-w-72 md:max-w-96">
           <div className="flex flex-col justify-center gap-2">
             <label htmlFor="Cardholder-name">CARDHOLDER NAME</label>
             <input
@@ -64,7 +67,7 @@ export default function App() {
             <div className="cvc flex flex-col gap-2">
               <label htmlFor="cvc">CVC</label>
               <input
-                className="pl-2 rounded-lg border-solid min-h-10 border-gray-300 border-[0.5px] hover:border-violet-900 focus:outline-violet-800 invalid:border-red-500"
+                className="pl-2 rounded-lg border-solid min-h-10 w-32 border-gray-300 border-[0.5px] hover:border-violet-900 focus:outline-violet-800 invalid:border-red-500"
                 type="text"
                 id="cvc"
                 placeholder="e.g. 123"
