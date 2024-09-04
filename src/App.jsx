@@ -6,22 +6,70 @@ function handleClick() {
 
 export default function App() {
   return (
-    <main className="mainbackground max-h-screen flex flex-col md:flex-row">
+    <main className="mainbackground min-h-screen flex flex-col md:flex-row">
       <div
-        className="sidebackground bg-[url('images/bg-main-mobile.png')] bg-cover md:bg-[url('images/bg-main-desktop.png'
-       h-60 md:w-[483px] md:h-screen flex justify-center items-center "
+        className="sidebackground bg-no-repeat bg-[url('images/bg-main-mobile.png')]  md:bg-[url('images/bg-main-desktop.png')]
+       h-60 md:w-[33%] md:h-screen flex flex-col justify-center items-center bg-cover relative"
       >
-        <div className="flex flex-col md:gap-10 max-h-64 max-w-[80%] md:max-w-96 md:absolute md:translate-x-40">
-          <img
-            src="images/bg-card-front.png"
-            alt="card-front"
-            className="translate-y-32 -translate-x-7 z-10 md:-translate-x-14 md:translate-y-0"
-          />
-          <img
-            src="images/bg-card-back.png"
-            alt="card-back"
-            className="-translate-y-32 translate-x-7 md:translate-x-10 md:translate-y-0"
-          />
+        <div className="hidden md:flex md:flex-col gap-4 absolute top-7 md:top-32">
+          <div className="relative z-10">
+            <img
+              src="images/bg-card-front.png"
+              alt="bg-card-front"
+              className="max-w-96 w-full sm:drop-shadow-xl translate-x-1/3 -translate-y-0"
+            />
+            <span className="size-8 rounded-full bg-white absolute top-5 left-40 "></span>
+            <span className="size-4 rounded-full bg-transparent absolute top-7 left-52 ring-1 ring-white"></span>
+            <p className="text-white text-right text-3xl absolute -inset-x-24 top-28 tracking-tight">
+              0000 0000 0000 0000
+            </p>
+            <p className="absolute text-white text-sm font-semibold left-40 bottom-5">
+              JANE APPLESEED
+            </p>
+            <p className="absolute text-white text-sm font-semibold -right-24 bottom-5">
+              00 / 00
+            </p>
+          </div>
+          <div className="relative">
+            <img
+              src="images/bg-card-back.png"
+              alt="bg-card-back"
+              className="max-w-96 w-full sm:drop-shadow-xl translate-x-1/2 -translate-y-0"
+            />
+            <p className="absolute font-semibold text-base text-white -right-36 top-[5.5rem] ">
+              000
+            </p>
+          </div>
+        </div>
+        <div className="md:hidden flex flex-col gap-4 absolute top-7 md:top-32">
+          <div className="relative">
+            <img
+              src="images/bg-card-back.png"
+              alt="bg-card-back"
+              className="w-72 max-w-96 drop-shadow-lg sm:drop-shadow-xl "
+            />
+            <p className="absolute font-medium text-sm text-white right-8 top-[4.25rem] ">
+              000
+            </p>
+          </div>
+          <div className="relative z-10">
+            <img
+              src="images/bg-card-front.png"
+              alt="bg-card-front"
+              className="w-72 max-w-96 drop-shadow-lg sm:drop-shadow-xl -translate-x-12 -translate-y-[5.6rem]"
+            />
+            <span className="size-8 rounded-full bg-white absolute -left-8 -top-16"></span>
+            <span className="size-4 rounded-full bg-transparent absolute left-4 -top-14 ring-1 ring-white"></span>
+            <p className="text-white text-2xl absolute -left-7 -top-2 tracking-tight">
+              0000 0000 0000 0000
+            </p>
+            <p className="absolute text-white text-xs font-semibold -left-8 top-10">
+              JANE APPLESEED
+            </p>
+            <p className="absolute text-white text-sm font-semibold right-16 top-10">
+              00 / 00
+            </p>
+          </div>
         </div>
       </div>
       <div className="flex justify-center relative top-28 md:top-0 md:left-80">
